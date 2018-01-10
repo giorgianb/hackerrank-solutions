@@ -1,5 +1,6 @@
-;(defparameter *months* '(31 28 31 30 31 30 31 31 30 31 30 31))
-;(defparameter *counts* (reverse (maplist #'(lambda (l) (apply #'+ l)) (reverse *months*))))
+;; TO BE SOLVED: Calenders are tricky
+;;(defparameter *months* '(31 28 31 30 31 30 31 31 30 31 30 31))
+;;(defparameter *counts* (reverse (maplist #'(lambda (l) (apply #'+ l)) (reverse *months*))))
 
 (defun is-leap? (y)
   (zerop (mod y 4)))
