@@ -1,0 +1,17 @@
+;; Problem URL: https://www.hackerrank.com/challenges/apple-and-orange/problem
+(defun main ()
+  (let* ((h1 (read))
+	 (h2 (read))
+	 (a (read))
+	 (b (read))
+	 (m (read))
+	 (n (read))
+	 (ad (loop for i from 1 to m collect (read)))
+	 (bd (loop for i from 1 to n collect (read)))
+	 (af (mapcar #'(lambda (d) (+ d a)) ad))
+	 (bf (mapcar #'(lambda (d) (+ d b)) bd))
+	 (ahit (count-if #'(lambda (c) (and (<= (min h1 h2) c) (>= (max h1 h2) c))) af))
+	 (bhit (count-if #'(lambda (c) (and (<= (min h1 h2) c) (>= (max h1 h2) c))) bf)))
+    (format t "~A~%~A~%" ahit bhit)))
+	    
+(main)
